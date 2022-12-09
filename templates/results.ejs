@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Numbers</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="box" id="container">
+      <a href="/"><h1>Numbers</h1></a>
+      <h2>
+        Results for <%=form.name%>.<br />Click
+        <a href="/search/?name=<%=form.name%>">here</a> to see all searches from
+        <%=form.name%>.
+      </h2>
+      <article>
+        <h3><%=form.phone[0]%>-<%=form.phone[1]%>-<%=form.phone[2]%></h3>
+        <% for (property in form.fact.phoneFact) {%>
+        <p><%= form.fact.phoneFact[property] %></p>
+        <% } %>
+      </article>
+      <article>
+        <h3><%=form.date[0]%>/<%=form.date[1]%>/<%=form.date[2]%></h3>
+        <p><%= form.fact.dateFact1["text"] %></p>
+        <p><%= form.fact.dateFact2["text"] %></p>
+      </article>
+      <article>
+        <h3><%=form.ssn[0]%>-<%=form.ssn[1]%>-<%=form.ssn[2]%></h3>
+        <% for (property in form.fact.ssnFact) {%>
+        <p><%= form.fact.ssnFact[property] %></p>
+        <% } %>
+      </article>
+    </div>
+  </body>
+  <style>
+    #container {
+      margin: auto auto auto 400px;
+      width: 60%;
+      justify-content: space-between;
+      padding-bottom: 200px;
+    }
+
+    h1 {
+      margin-top: 40px;
+      line-height: 100%;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      margin-bottom: -10px;
+      margin-top: 20px;
+      font-size: 55px;
+    }
+
+    article {
+      margin-bottom: 0px;
+    }
+  </style>
+</html>

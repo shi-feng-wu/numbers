@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Numbers</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <a href="/"><h1>Numbers</h1></a>
+      <h2>
+        Enter your personal information to see interesting numerical facts!
+      </h2>
+      <form method="post" autocomplete="off">
+        <label for="name">Name</label
+        ><input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="First Last"
+          required
+        /><br />
+        <label for="phone">Phone Number</label
+        ><input
+          id="phone"
+          name="phone"
+          type="text"
+          maxlength="12"
+          minlength="12"
+          required
+          placeholder="000-000-0000"
+        /><br />
+        <label for="date">Date of Birth</label
+        ><input
+          id="date"
+          name="date"
+          type="text"
+          maxlength="10"
+          minlength="10"
+          required
+          placeholder="mm/dd/yyyy"
+        /><br />
+        <label for="ssn">Social Security Number</label
+        ><input
+          id="ssn"
+          name="ssn"
+          type="text"
+          maxlength="11"
+          minlength="11"
+          required
+          placeholder="000-00-0000"
+        /><br />
+        <input id="submit" type="submit" />
+      </form>
+    </div>
+  </body>
+  <script>
+    var phone = document.querySelector("#phone");
+    phone.addEventListener("keyup", function (e) {
+      if (
+        event.key != "Backspace" &&
+        (phone.value.length === 3 || phone.value.length === 7)
+      ) {
+        phone.value += "-";
+      }
+    });
+
+    var date = document.querySelector("#date");
+    date.addEventListener("keyup", function (e) {
+      if (
+        event.key != "Backspace" &&
+        (date.value.length === 2 || date.value.length === 5)
+      ) {
+        date.value += "/";
+      }
+    });
+
+    var ssn = document.querySelector("#ssn");
+    ssn.addEventListener("keyup", function (e) {
+      if (
+        event.key != "Backspace" &&
+        (ssn.value.length === 3 || ssn.value.length === 6)
+      ) {
+        ssn.value += "-";
+      }
+    });
+  </script>
+</html>
