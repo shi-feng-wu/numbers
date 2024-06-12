@@ -6,4 +6,5 @@ and calls an API that gives interesting facts about their info. Users can
 then access previous submissions from the same name.
 
 API: https://numbersapi.com/
-Video: 
+Website: https://numbers.onrender.com/ 
+(may have long load times with inactivity)
